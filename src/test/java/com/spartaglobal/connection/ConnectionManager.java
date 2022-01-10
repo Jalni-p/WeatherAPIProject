@@ -13,6 +13,7 @@ public class ConnectionManager {
     private static final String BASEURL = "https://api.openweathermap.org/data/2.5/weather";
     private static final String KEY = ConfigReader.getConfigKey();
 
+
     public static String getConnectionCity(String city) {
         return BASEURL + "?q=" + city + "&appid=" + KEY;
     }
@@ -32,6 +33,11 @@ public class ConnectionManager {
     public static int getStatusCode(String connection) {
         HttpResponse<String> httpResponse = getStringHttpResponse(connection);
         return httpResponse.statusCode();
+    }
+
+    public static String getHeader(String connection, String key){
+        HttpResponse<String> httpResponse = getStringHttpResponse(connection);
+        return httpResponse.headers().map().get(key).get(0);
     }
 
     private static HttpResponse<String> getStringHttpResponse(String connection) {
