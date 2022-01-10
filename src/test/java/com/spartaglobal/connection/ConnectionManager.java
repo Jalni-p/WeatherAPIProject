@@ -26,7 +26,7 @@ public class ConnectionManager {
         return BASEURL + "?id=" + id + "&appid=" + KEY;
     }
 
-    public static String getConnectionLatAndLon(String lat, String lon) {
+    public static String getConnectionLatAndLon(Double lat, Double lon) {
         return BASEURL + "?lat=" + lat + "&lon=" + lon + "&appid=" + KEY;
     }
 
