@@ -1,6 +1,3 @@
-package com.spartaglobal;
-public class ConnectionCityIDTests {
-
 
 import com.spartaglobal.connection.ConnectionManager;
 import com.spartaglobal.dto.WeatherDTO;
