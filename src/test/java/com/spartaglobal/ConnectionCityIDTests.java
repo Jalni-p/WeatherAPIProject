@@ -1,3 +1,4 @@
+
 import com.spartaglobal.connection.ConnectionManager;
 import com.spartaglobal.dto.WeatherDTO;
 import com.spartaglobal.injector.Injector;
@@ -19,4 +20,6 @@ public class ConnectionCityIDTests {
     public void testId() {
         Assertions.assertEquals(2643743, weatherDTO.getId());
     }
+
 }
+
