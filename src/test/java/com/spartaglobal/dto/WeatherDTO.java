@@ -6,10 +6,10 @@ import java.util.List;
 public class WeatherDTO {
 
     @JsonProperty("visibility")
-    private int visibility;
+    private Integer visibility;
 
     @JsonProperty("timezone")
-    private int timezone;
+    private Integer timezone;
 
     @JsonProperty("main")
     private Main main;
@@ -21,10 +21,13 @@ public class WeatherDTO {
     private Sys sys;
 
     @JsonProperty("dt")
-    private int dt;
+    private Integer dt;
 
     @JsonProperty("coord")
     private Coord coord;
+
+    @JsonProperty("rain")
+    private Rain oneH;
 
     @JsonProperty("weather")
     private List<WeatherItem> weather;
@@ -33,10 +36,10 @@ public class WeatherDTO {
     private String name;
 
     @JsonProperty("cod")
-    private int cod;
+    private Integer cod;
 
     @JsonProperty("id")
-    private int id;
+    private Integer id;
 
     @JsonProperty("base")
     private String base;
@@ -44,11 +47,11 @@ public class WeatherDTO {
     @JsonProperty("wind")
     private Wind wind;
 
-    public int getVisibility() {
+    public Integer getVisibility() {
         return visibility;
     }
 
-    public int getTimeZone() {
+    public Integer getTimeZone() {
         return timezone;
     }
 
@@ -64,9 +67,11 @@ public class WeatherDTO {
         return sys;
     }
 
-    public int getDt() {
+    public Integer getDt() {
         return dt;
     }
+
+    public Rain getOneH() { return oneH;}
 
     public Coord getCoord() {
         return coord;
@@ -80,11 +85,11 @@ public class WeatherDTO {
         return name;
     }
 
-    public int getCod() {
+    public Integer getCod() {
         return cod;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
