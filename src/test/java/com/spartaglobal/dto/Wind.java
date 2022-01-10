@@ -10,6 +10,9 @@ public class Wind{
 	@JsonProperty("speed")
 	private Double speed;
 
+	@JsonProperty("gust")
+	private Double gust;
+
 	public Integer getDeg(){
 		return deg;
 	}
@@ -17,4 +20,6 @@ public class Wind{
 	public Double getSpeed(){
 		return speed;
 	}
+
+	public Double getGust() { return gust; }
 }

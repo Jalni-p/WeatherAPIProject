@@ -26,6 +26,9 @@ public class WeatherDTO {
     @JsonProperty("coord")
     private Coord coord;
 
+    @JsonProperty("rain")
+    private Rain oneH;
+
     @JsonProperty("weather")
     private List<WeatherItem> weather;
 
@@ -67,6 +70,8 @@ public class WeatherDTO {
     public Integer getDt() {
         return dt;
     }
+
+    public Rain getOneH() { return oneH;}
 
     public Coord getCoord() {
         return coord;
