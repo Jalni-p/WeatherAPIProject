@@ -29,12 +29,11 @@ public class FrameworkTests {
 //    }
 
     @Nested
-
     @DisplayName("Checking type is correct")
     public class CheckForType {
         @Test
-        @DisplayName("Check that coordenates are correct type")
-        public void checkCoordenatesCoord(){
+        @DisplayName("Check that coordinates are correct type")
+        public void checkCoordinatesCoord(){
             Assertions.assertEquals(Coord.class, weatherDTO.getCoord().getClass());
         }
 
@@ -109,7 +108,8 @@ public class FrameworkTests {
         public void checkCodInt(){
             Assertions.assertTrue(weatherDTO.getCod() instanceof Integer);
         }
-=======
+
+    @Nested
     @DisplayName("Checking returns are not null")
     class checkValuesAreNotNull {
 
@@ -125,36 +125,42 @@ public class FrameworkTests {
             Assertions.assertFalse(weatherDTO.getBase() == null);
 
         }
+
         @Test
         @DisplayName(" Checking Visibility is not null")
         public void CheckVisibilityIsNotNull() {
             Assertions.assertFalse(weatherDTO.getVisibility() == null);
 
         }
+
         @Test
         @DisplayName(" Checking Timezone is not null")
         public void CheckTimeZoneIsNotNull() {
             Assertions.assertFalse(weatherDTO.getTimeZone() == null);
 
         }
+
         @Test
         @DisplayName(" Checking Main is not null")
         public void CheckMainIsNotNull() {
             Assertions.assertFalse(weatherDTO.getMain() == null);
 
         }
+
         @Test
         @DisplayName(" Checking Clouds is not null")
         public void CheckCloudsIsNotNull() {
             Assertions.assertFalse(weatherDTO.getClouds() == null);
 
         }
+
         @Test
         @DisplayName(" Checking Sys is not null")
         public void CheckSysIsNotNull() {
             Assertions.assertFalse(weatherDTO.getSys() == null);
 
         }
+
         @Test
         @DisplayName(" Checking Dt is not null")
         public void CheckDtIsNotNull() {
@@ -168,31 +174,36 @@ public class FrameworkTests {
             Assertions.assertFalse(weatherDTO.getCoord() == null);
 
         }
+
         @Test
         @DisplayName(" Checking Weather is not null")
         public void CheckWeatherIsNotNull() {
             Assertions.assertFalse(weatherDTO.getWeather() == null);
 
         }
+
         @Test
         @DisplayName(" Checking cod is not null")
         public void CheckCodIsNotNull() {
             Assertions.assertFalse(weatherDTO.getCod() == null);
 
         }
+
         @Test
         @DisplayName(" Checking Id is not null")
         public void CheckIdIsNotNull() {
             Assertions.assertFalse(weatherDTO.getId() == null);
 
         }
+
         @Test
         @DisplayName(" Checking  is not null")
         public void CheckWindIsNotNull() {
             Assertions.assertFalse(weatherDTO.getWind() == null);
         }
 
- 
 
+    }
     
+}
 }
